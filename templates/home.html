@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <!--Navigation bar-->
+        <nav class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </nav>
+    </header>
+    <h1>Find Your Flight Ticket Price</h1>
+    <main>
+        <br><br><br>
+
+        <form action="\prediction" method="post">
+            <!--Airline-->
+            <label for="Airlines">Choose your travelling Airline:</label>
+            <select name="Airline" id="Airline" required="required">
+      <option value="Air India">Air India</option>
+      <option value="GoAir">GoAir</option>
+      <option value="IndiGo" selected>IndiGo</option>
+      <option value="Jet Airways">Jet Airways</option>
+      <option value="Jet Airways Business">Jet Airways Business</option>
+      <option value="Multiple carriers">Multiple carriers</option>
+      <option value="Multiple carriers Premium economy" selected>Multiple carriers Premium economy</option>
+      <option value="SpiceJet">SpiceJet</option>
+      <option value="Trujet">Trujet</option>
+      <option value="Vistara">Vistara</option>
+      <option value="Vistara Premium economy">Vistara Premium economy</option>
+      <option value="Air Asia">Air Asia</option>
+    </select>
+            <br><br><br>
+            <!--Date of Journey-->
+            <label for="Date of Journey1">Select date of Journey</label>
+            <input type="date" name="Date of Journey" id="Date of Journey" min="2019-01-01" max="2019-12-31" required="required">
+            <br><br><br>
+            <!--Source-->
+            <label for="Source1"> Where are you picking up the flight from</label>
+            <select name="Source" id="Source11" required="required">
+      <option value="S_Kolkata">Kolkata</option>
+      <option value="S_Delhi">Delhi</option>
+      <option value="S_Chennai">Chennai</option>
+      <option value="S_Mumbai">Mumbai</option>
+      <option value="S_Banglore">Banglore</option>
+    </select>
+            <br><br><br>
+            <!--Destination-->
+            <label for="Final Destination"> What is the final destination: </label>
+            <select name="Final_Destination" id="Final_Destination" required="required">
+       <option value="D_Cochin">Cochin</option>
+       <option value="D_Delhi">Delhi</option>
+       <option value="D_Hyderabad">Hyderabad</option>
+       <option value="D_Kolkata">Kolkata</option>
+       <option value="D_New Delhi">New Delhi</option>
+       <option value="D_Banglore">Banglore</option>
+
+     </select>
+            <br><br><br>
+            <!--Departure Time-->
+            <label for="Departure Time1">What is the departure time:</label>
+            <input type="time" name="Departure Time" id="Departure Time11" value="00:00" required="required">
+            <br><br><br>
+            <!--Duration-->
+            <label for="Duration of Flight1">The duration of flight:</label>
+            <input type="time" name="Duration of Flight" id="Duration of Flight11" value="02:00" required="required">
+            <br><br><br>
+            <!--Total Stops-->
+            <label for="Total Stops1">Number of stops between source and final destination:</label>
+            <select name="Total Stops" id="Total Stops11" required="required">
+      <option value="0">No stops</option>
+      <option value="1">1 stop</option>
+      <option value="2">2 stops</option>
+      <option value="3">3 stops</option>
+      <option value="4">4 stops</option></select>
+            <br><br><br>
+            <button type="submit" value="Submit"> Submit </button>
+            <button type="reset" value="reset">reset</button>
+        </form>
+    </main>
+
+    <br><br> {{ prediction_text }}
+    <footer>
+        <p>© 2022 Kartikey Bartwal</p>
+    </footer>
+
+</body>
+
+</html>

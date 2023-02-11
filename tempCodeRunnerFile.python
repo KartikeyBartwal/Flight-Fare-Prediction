@@ -1,0 +1,20 @@
+import moviepy.editor as mp
+
+# Load the original video
+original_video = mp.VideoFileClip("C:\\Users\\hp\\Downloads\\videoplayback-unscreen.gif")
+
+# Get the duration of the video
+duration = original_video.duration
+
+# Split the video into two clips, one for the first half and one for the second half
+first_half = original_video.subclip(0, duration/2)
+second_half = original_video.subclip(duration/2, duration)
+
+# Reverse the second half
+reversed_second_half = second_half.fx(mp.vfx.time_mirror)
+
+# Concatenate the two clips to create the final video
+final_video = mp.concatenate_videoclips([first_half, reversed_second_half])
+
+# Write the final video to a file
+final_video.write_videofile("final_video.mp4")
